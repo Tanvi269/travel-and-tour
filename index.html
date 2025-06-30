@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  nav a.active {
+    border-bottom: 2px solid yellow;
+  }
+</style>
+
+  <meta charset="UTF-8">
+  <title>Explore India - Tour & Travel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="script.js" defer></script>
+
+<script>
+  const links = document.querySelectorAll("nav a");
+  const sections = document.querySelectorAll("section");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 60) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+<body>
+
+<button onclick="scrollToTop()" id="topBtn">⬆ Back to Top</button>
+
+<script>
+  const links = document.querySelectorAll("nav a");
+  const sections = document.querySelectorAll("section");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 60) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
+  <header>
+    <h1>Explore India</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to Explore India</h2>
+    <p>Your journey starts here. Discover the beauty of India with us!</p>
+    <img src="images/banner.jpg" alt="Tour India" />
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a leading travel agency providing best packages for exploring India’s heritage, culture, and natural beauty.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+      <div>
+        <h3>Flight Booking</h3>
+        <p>Best deals on domestic and international flights.</p>
+      </div>
+      <div>
+        <h3>Hotel Booking</h3>
+        <p>Comfortable stays at great prices across all destinations.</p>
+      </div>
+      <div>
+        <h3>Tour Packages</h3>
+        <p>Customized packages for every budget and interest.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <!-- Existing images -->
+    <img src="images/travel.jpg" alt="Travel Destination" />
+    <img src="images/service1.jpg" alt="Service Highlight" />
+
+    <!-- Existing images -->
+    <img src="images/destination1.jpg" alt="Place 1" />
+    
+      </div>
+</section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea placeholder="Your Message"></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+<section id="testimonials">
+  <h2>What Our Travelers Say</h2>
+  <div class="testimonial-box">
+    <blockquote>"Amazing experience! The tour was perfectly planned!"</blockquote>
+    <p>- Riya Sharma</p>
+  </div>
+  <div class="testimonial-box">
+    <blockquote>"Highly recommended! Professional service and great value."</blockquote>
+    <p>- Amit Verma</p>
+  </div>
+</section>
+<section id="socialmedia">
+  <h2>Connect With Us</h2>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank">
+      <img src="images/facebook.jpg" alt="Facebook">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="images/instagram.jpg" alt="Instagram">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="images/twitter.jpg" alt="Twitter">
+    </a>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Explore India. All rights reserved.</p>
+  </footer>
+
+  
+
+</body>
+<div class="overlay"></div>
+
+</html>
+
+
